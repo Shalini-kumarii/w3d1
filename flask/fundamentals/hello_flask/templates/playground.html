@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+h1 {
+    text-align: center;
+}
+.container {
+   display: flex;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+    padding-left: 30px;
+    margin: 10px;
+    height: 250px;
+    width: 100px;
+    justify-content: space-around;
+    background-color:skyblue;
+    border:  3px solid black;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Welcome!</h1>
+{% if phrase == "first" %}
+<h1>inside first</h1>
+    <div class="container">
+
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+
+    </div>
+{% endif %}
+
+{% if phrase == "second" %}
+<h1> inside second</h1>
+
+    <div class="container">
+        {% for x in range(0,value): %}
+            <div class="col"></div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+{% if phrase == "third" %}
+    <div class="container">
+        {% for x in range(0,value): %}
+            <div class="col" style=background-color:{{colors}}></div>
+        {% endfor %}
+    </div>
+{% endif %}
+</body>
+</html>
