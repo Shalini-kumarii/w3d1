@@ -1,0 +1,11 @@
+
+.color1{
+    background-color: black;
+}
+.color2{
+    background-color: chartreuse;
+}
+table tr td{
+    width:40px;
+    height: 40px;
+}
