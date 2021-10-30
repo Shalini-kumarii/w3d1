@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>checkboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/htmltable.css') }}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>First_name</th>
+            <th>Last_name</th>
+            <th>Full name</th>
+        </tr>
+    {% for users in user %}
+    
+        <tr>
+            <td>{{ users['first_name'] }}</td>
+            <td>{{ users['last_name'] }} </td>
+            <td>{{ users['first_name'] }}{{ users['last_name'] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

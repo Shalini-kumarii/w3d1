@@ -1,0 +1,16 @@
+
+table tr td{
+    width:40px;
+    height: 40px;
+    border:1px solid black;
+}
+table th{
+    justify-content: space-around;
+    background-color:gray;
+    color:lightsalmon
+}
+table{
+    align-items: center;
+    justify-content: space-around;
+    padding-left:500px;
+}
