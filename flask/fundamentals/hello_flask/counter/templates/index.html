@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>counter</h1>
+    <h3>{{counter}} count</h3>
+    <div class="col1">
+        <div>
+    <form action="/form_click" method="post"> 
+        <button class="btn1" type="submit">Click</button>
+    </form>
+    </div>
+    <div>
+    <form action="/form_refresh" method="post">
+        <button class="btn2" type="submit">Refresh</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

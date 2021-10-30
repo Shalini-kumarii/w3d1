@@ -1,0 +1,21 @@
+.col1{
+    display:flex;
+    justify-content: center;
+}
+.btn1{
+    background-color: khaki;
+    height: 30px;
+    width: 80px;
+}
+.btn2{
+    background-color: lightcoral;
+    height: 30px;
+    width: 90px;
+    margin-left: 30px;
+}
+h3{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
