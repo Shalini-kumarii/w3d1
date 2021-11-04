@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>friend sql</title>
+    
+</head>
+<body>
+    <h1>first sql connection</h1>
+    <table>
+        <thead>
+            <tr>
+                <th> First name</th>
+                <th> Last name</th>
+                <th> email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+        <tbody>
+            {% for user in users %}
+              <tr>
+                <td>{{ user.id }}</td>
+                <td><a href="/users/{{ user.id }}">{{ user.first_name }}</a></td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at }}</td>
+                <td>{{ user.updated_at }}</td>
+                <td><a href="/users/show/{{ user.id }}">Show</a>
+                    <a href="/users/edit/{{ user.id }}">Edit</a>
+                    <a href="/users/delete/{{ user.id }}">Delete</a>
+                </td>
+              </tr>
+            {% endfor %}
+    </table>
+   
+    <a href="/users/new">Add new User</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
