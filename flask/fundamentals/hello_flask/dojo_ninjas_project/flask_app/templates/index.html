@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>friend sql</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennel</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="col1">
+            <div>
+                <form class="info" action="/dojos/create" method="post">
+                    <div>
+                        <label for="fname">Name: </label>
+                        <input type="text" id="fname" name="name">
+
+                        <button class="adddojo" "type=" submit">Add Dojo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col1 ">
+            <form class="info" action="/dojos/show"></form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>All Dojos</th>
+                    </tr>
+                </thead>
+                <div>
+                    <tbody>
+                        {% for dojo in dojos %}
+                        <tr>
+                            <td><a href="/dojos/show/{{ dojo.id }}">{{ dojo.name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </div>
+            </table>
+        </div>
+    </div>
+    <a href="/ninjas/new">Add New Ninja</a>
+</body>
+
+</html>

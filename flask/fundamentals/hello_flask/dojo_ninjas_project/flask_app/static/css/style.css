@@ -1,0 +1,46 @@
+.main{
+    display:flex;
+}
+.col1 {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+    border: 2px solid black;
+}
+.adddojo {
+    margin-left: 45px;
+    margin-top: 10px;
+    color:yellow;
+    background-color: violet;
+}
+.addNinja{
+    height:200px;
+    width:300px;
+    background-color: black;
+    color:white;
+    padding:50px;
+}
+form{
+    display:table;
+}
+p{
+    display: table-row;
+ 
+}
+label{
+    display:table-cell;
+    text-align: left;
+}
+input{
+    display: table-cell;
+}
+.dojoname{
+    width:170px;
+}
+table, th, td{
+    border: 1px solid white;
+}
+.header{
+    background-color: turquoise;
+}

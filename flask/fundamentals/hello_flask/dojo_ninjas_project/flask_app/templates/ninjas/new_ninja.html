@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennel</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h1>Add a Ninja</h1>
+  <form action="/ninjas/create" method="post">
+    <div class="addNinja">
+      
+        <label>Dojo:</label>
+        <p>
+        <select class="dojoname" name="dojo_id" id="">
+          {% for dojo in dojos %}
+          <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+          {% endfor %}
+        </select>
+      </p>
+      <label>First Name</label>
+      <p><input type="text" id="first_name" name="first_name" value=""></p>
+      <label>Last Name</label>
+      <p> <input type="text" id="last_name" name="last_name" value=""></p>
+      <label>Age</label>
+      <p> <input type="number" id="age" name="age" value=""></p>
+
+
+      <button class="adddojo">Add A ninja</button>
+    </div>
+  </form>
+  <a href="/">Home</a>
+</body>
+
+</html>
