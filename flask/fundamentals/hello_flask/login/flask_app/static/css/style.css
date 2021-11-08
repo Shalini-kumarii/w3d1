@@ -1,0 +1,54 @@
+.main{
+    height:450px;
+    width: 700px;
+    position: absolute;
+    left: 20%;
+    top:30%;
+    margin: -25px 0 0 -25px;
+    color:white;
+    display: flex;
+}
+.col1 {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: black;
+    border: 2px solid black;
+}
+div{
+ margin-top:10px;
+ margin-left: 20px;
+
+}
+.btn1{
+    margin-left:350px;
+    background-color:cornflowerblue;
+    color:white;
+}
+h3{
+    border-bottom: 3px solid goldenrod ;
+    width:120px;
+}
+h1{
+    color:goldenrod
+}
+form{
+    display:table;
+}
+p{
+    display: table-row;
+ 
+}
+label{
+    display:table-cell;
+    text-align: left;
+}
+input{
+    display: table-cell;
+}
+.dojoname{
+    width:170px;
+}
+table, th, td{
+    border: 1px solid white;
+}

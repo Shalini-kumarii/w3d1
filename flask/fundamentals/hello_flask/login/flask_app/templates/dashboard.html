@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+            <div>
+            <h1>dashboard</h1>
+            <h3>Name: {{ user.first_name }} {{ user.last_name }}</h3>
+            <a href= "/logout">Logout</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
