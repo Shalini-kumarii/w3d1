@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="main">
+        <form action="/show">
+            <div>
+            <h3>submitted info</h3>
+            </div>
+            <div>
+            <label for="fname">Name  :{{ dojoinfo.name }}</label>
+            </div>
+            <div>
+            <label for="location">Dojo Location  : {{ dojoinfo.location }}</label>
+            </div>
+            <div>
+            <label for="languge">Favorite Language  :{{ dojoinfo.language }}</label>
+            </div>
+            <div>
+            <label for="comment">comment (optional)  :{{ dojoinfo.comment }}</label>
+            </div>
+            </form>
+            <form action="/index">
+            <div>
+            <button class="btn1" type="submit">GoBack</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
