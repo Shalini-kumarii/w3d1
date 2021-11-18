@@ -1,0 +1,71 @@
+
+
+<head>
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="col1">
+        <div>
+            <h1>Sign Up</h1>
+        </div>
+        <form class="info" action="/register" method="post">
+            
+            <div>
+                <label for="name">First Name: </label>
+                <input type="text" id="first_name" name="first_name">
+            </div>
+            <div>
+                <label for="name">Last Name: </label>
+                <input type="text" id="last_name" name="last_name">
+            </div>
+            <div>
+                <label for="name">Email: </label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div>
+                <label for="name">Password: </label>
+                <input type="text" id="password" name="password">
+            </div>
+            <div>
+                <label for="name">Confirm Password: </label>
+                <input type="text" id="confirm_password" name="confirm_password">
+            </div>
+            <div>
+                <button class="btn3 btn2" type="submit">Register</button>
+            </div>
+        </form> 
+       
+        </div>
+        <div class="col1">
+        <div>
+            <h1>Login</h1>
+        </div>
+        <form class="info" action="/login" method="post">
+            <div>
+                <label for="name">Email: </label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div>
+                <label for="name">Password: </label>
+                <input type="text" id="password" name="password">
+            </div>
+            <div>
+                <button class="btn4 btn2" type="submit">Login</button>
+            </div>
+       
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="text-danger">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

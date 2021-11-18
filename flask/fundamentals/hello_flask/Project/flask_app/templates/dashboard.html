@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crime Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav container justify-between justify-center">
+        <div class="logo container align-center justify-between">
+            <h2>Welcome: {{ logged_in_user.first_name }} {{ logged_in_user.last_name }}</h2></div>
+             <div class="logo container align-center justify-right">
+                <a href= "users/new">Report Crime</a>
+            <a href= "/logout">Logout</a></div>
+            </div>
+
+            <div class="dashboard">
+
+                <h3>All Report filed by you </h3>
+                <table>
+                    <thead>
+                    <tr>
+                    <th>County</th>
+                    <th>Neighborhood</th>
+                    <th>Nature Of Crime</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for crime in all_crime %}
+                        <tr>
+                            <td>{{ crime.county }} </td>
+                            <td>{{ crime.neighborhood }} </td>
+                            <td> {{ crime.nature_of_crime }}</td>
+                            <td> {{ crime.status }}</td>
+                            <td>
+                                <a class="ahref" href="/users/{{ crime.id }}/edit">Show Details</a>
+                                <a class="ahref" href="/users/{{ crime.id }}/delete">Delete</a>
+                            </td>
+                        </tr> 
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+</body>
+
+</html>

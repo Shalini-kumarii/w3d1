@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crime Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav container justify-between justify-center">
+        <div class="logo container align-center justify-between">
+            <h2>Edit Details</h2>
+        </div>
+        <div class="logo container align-center justify-right">
+            <a href="/dashboard">Back </a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="dashboard box box1">
+    <form class="info" action="/users/{{ crime.id }}/update" method="post">
+        <div>
+            <label for="name">Nature of Crime </label>
+            <select name="nature_of_crime" id="nature_of_crime">
+                {% for nature in crimelist %}
+                {% if nature == crime.nature_of_crime %}
+                <option value="{{ nature }}" selected>{{ nature }}</option>
+                {% else %}
+                <option value="{{ nature }}">{{ nature }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="name">Address1: </label>
+            <input type="text" id="address1" name="address1" value="{{ crime.address1 }}">
+        </div>
+        <div>
+            <label for="name">Address2: </label>
+            <input type="text" id="address2" name="address2" value="{{ crime.address2 }}">
+        </div>
+        <div>
+            <label for="name">County: </label>
+            <input type="text" id="county" name="county" value="Redmond" >
+        </div>
+        <div>
+            <label for="name">Neighborhood </label>
+            <select name="neighborhood" id="neighborhood">
+                {% for neighborhood in neighborhood_list %}
+                {% if neighborhood == crime.neighborhood %}
+                <option value="{{ neighborhood }}" selected>{{ neighborhood }}</option>
+                {% else %}
+                <option value="{{ neighborhood }}">{{ neighborhood }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="name">Pin: </label>
+            <input type="text" id="pin" name="pin" value="{{ crime.pin }}">
+        </div>
+        <div>
+            <label for="name">Description of crime: </label>
+            <input type="text" id="description" name="description" value="{{ crime.description }}">
+        </div>
+        <div>
+            <button class="btn1" type="submit">Update</button>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p class="text-danger">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </form>
+    </div>
+</body>
+
+
+</html>

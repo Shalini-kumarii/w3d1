@@ -1,0 +1,180 @@
+.main{
+    height:550px;
+    width: 900px;
+    position: absolute;
+    left: 15%;
+    top:20%;
+    margin: -25px 0 0 -25px;
+    color:black;
+    display: flex;
+
+}
+.firstmain{
+    height:450px;
+    width: 700px;
+    position: absolute;
+    left: 20%;
+    top:20%;
+    margin: -25px 0 0 -25px;
+    background-color:mistyrose;
+}
+.container{
+    display: flex;
+}
+
+.justify-left {
+    justify-content: left;
+}
+.justify-right {
+    justify-content: right;
+}
+.justify-center {
+    justify-content: center;
+}
+.jutify-around{
+    justify-content: space-around;
+}
+.align-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.nav{
+    color:white;
+    background-color:deepskyblue;
+    padding-left:5%;
+    padding-right: 5%;
+
+}
+.img{
+    background-color:white;
+}
+
+.logo a{
+    margin-left: 30px;
+    color:white;
+    text-decoration: none;
+    width:150px;
+    font-weight: bold;
+}
+.col1 {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color:mistyrose;
+    border: 1px solid grey;
+}
+div{
+    margin-top:10px;
+    margin-left:20px;
+}
+.btn1{
+    margin-left: 250px;
+    margin-top: 50px;
+    height: 40px;
+    width: 200px;
+    background-color:deepskyblue;
+    color:white;
+    font-weight: bold;
+}
+.btn2{
+    background-color: dodgerblue;
+    color:white;
+    font-weight: bold;
+}
+.btn3{
+    margin-left: 100px;
+    margin-top: 50px;
+    height: 40px;
+    width: 150px;
+}
+.btn4{
+    margin-left: 100px;
+    margin-top: 190px;
+    height: 40px;
+    width: 150px;
+}
+h1{
+    color:goldenrod
+}
+form{
+    display:table;
+}
+p{
+    display: table-row;
+}
+label{
+    display:table-cell;
+    text-align: left;
+}
+input{
+    display: table-cell;
+}
+table, th, td{
+    border: 1px solid black;
+    width:600px;
+}
+th{
+    background-color: deepskyblue;
+    color: white;
+    font-weight: bold;
+}
+td{
+    background-color:mistyrose;
+}
+.h3header{
+    color:black;
+}
+.header{
+    font-weight: bold;
+    font-size: large;
+}
+.infopage1{
+    font-size: 17px;
+    font-weight: lighter;
+    
+}
+.infopage2{
+    font-size: 17px;
+    font-weight:bold;
+    color:red;
+}
+.dashboard{
+    
+    position: absolute;
+    left: 25%;
+    top:20%;
+    margin: -25px 0 0 -25px;
+}
+.dashboard1{
+    margin-top:10px;
+    margin-left:350px;
+}
+.col2{
+    flex: 1;
+    background-color:mistyrose;
+}
+.col3{
+    flex:1;
+    background-color: white;
+}
+.box{
+    margin-top:10px;
+    margin-left:100px;
+}
+.box1{
+    background-color:mistyrose;
+}
+.box2{
+    width:500px;
+    margin-left: 400px;
+}
+a{
+    font-weight: bolder;
+    font-size: larger;
+}
+.ahref{
+    font-size: small;
+    font-weight: bolder;
+}

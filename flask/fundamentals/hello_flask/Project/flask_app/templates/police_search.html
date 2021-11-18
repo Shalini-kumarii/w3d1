@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crime Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div class="nav container justify-between justify-center">
+        <div class="logo container align-center justify-between">
+            <h2>Welcome: {{ logged_in_police.first_name }} {{ logged_in_police.last_name }}</h2>
+        </div>
+            <div class="logo container align-center justify-right">
+                <a href="/logout">Logout</a>
+            </div>
+    </div>
+    <div class="box box1 box2">
+        <form class="info" action="/police/search" method="post">
+            
+                <div>
+                    <label for="name">County: </label>
+                    <input type="text" id="county" name="county" value="Redmond">
+                </div>
+                <div>
+                    <label for="name">Neighborhood</label>
+                    <select name="neighborhood" id="neighborhood">
+                        <option value="Bear Creek">Bear Creek</option>
+                        <option value="Grass Lawn">Grass Lawn</option>
+                        <option value="Education Hill">Education Hill</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="name">Pin: </label>
+                    <input type="text" id="pin" name="pin">
+                </div>
+                <div>
+                    <button class="btn1" type="submit">Search</button>
+                </div>
+
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p class="text-danger">{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+    </form>
+    </div>
+
+    <div class="dashboard1">
+
+        <h3>All Reports</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>County</th>
+                    <th>Neighborhood</th>
+                    <th>Nature Of Crime</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for crime in searched_crime %}
+                <tr>
+                    <td>{{ crime.user.id }} </td>
+                    <td>{{ crime.county }} </td>
+                    <td>{{ crime.neighborhood }} </td>
+                    <td> {{ crime.nature_of_crime }}</td>
+                    <td> {{ crime.status }}</td>
+                    <td>
+                        <a class="ahref" href="/police/{{ crime.id }}/edit">Show Details</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+
+</html>
